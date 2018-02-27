@@ -5,11 +5,11 @@ Some common functionalities for working with graphs in Matlab
     - let it be the J-I (ones(k,k) - eye(k)) to be a complete multipartite graph.
 	
 	##### Examples 
-    1.
-    ```matlab
-    N = [15,25];
-	P = [.90,.10; .10,.85];
-	A = random_multi_bottleneck_simple_graph(N,P); 
-	spy(A)
+    1. ```matlab
+    	N = [15,25];
+		P = [.90,.10; .10,.85];
+		A = random_multi_bottleneck_simple_graph(N,P); 
+		spy(A)
 	```
+	output:
 	![N = [15,25]; P = [.90,.10; .10,.85];](/images/random_multi_bottleneck_simple_graph_ex1.png)
