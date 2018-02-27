@@ -42,6 +42,7 @@ Some common functionalities for working with graphs in Matlab
 	P = [1,0,0; 
 		 0,1,0; 
 		 0,0,1];](/images/random_multi_bottleneck_simple_graph_ex3.png)
+	
 	You don't have to specify P if you want this.
 		 
 	4. Complete tripartite
@@ -55,6 +56,6 @@ Some common functionalities for working with graphs in Matlab
 	P = [0,1,1; 
 		 1,0,1; 
 		 1,1,0];](/images/random_multi_bottleneck_simple_graph_ex4.png)
-	```
+
 	You can run the code without any inputs and it will return a graph on 40 vertices with two connected components where the connected components are complete graphs of sizes 10 and 15, respectively.
 	
