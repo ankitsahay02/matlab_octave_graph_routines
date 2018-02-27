@@ -12,16 +12,35 @@ function B = random_multi_bottleneck_simple_graph(N,P)
     % Outputs:
     %   B: an nxn adjacency matrix of the graph
     %
-    % 2-part Example :
+    % One bottleneck Example :
     % N = [15,25];
     % P = [.90,.10; 
     %      .10,.85];
+    % A = random_multi_bottleneck_simple_graph(N,P); 
     %
-    % 3-part Example :
+    % Three bottlenecks Example :
     % N = [20,15,25];
     % P = [.90,.10,.10; 
     %      .10,.85,.20; 
     %      .10,.20,.90];
+    % A = random_multi_bottleneck_simple_graph(N,P); 
+    %
+    % Complete connected components
+    %
+    % N = [20,15,25];
+    % P = eye(length(N));
+    % A = random_multi_bottleneck_simple_graph(N,P); 
+    % or just run it without specifying the P
+    % A = random_multi_bottleneck_simple_graph(N); 
+    % 
+    % Complte tripartite Example
+    % N = [20,15,25];
+    % P = ones(length(N), length(N)) - eye(length(N));
+    % A = random_multi_bottleneck_simple_graph(N,P); 
+    %
+    % You can run the code without any inputs and it will return a graph 
+    % on 40 vertices with two connected components where the connected 
+    % components are complete graphs of sizes 10 and 15, respectively.
     
     %taking care of the defaults
     if nargin < 2
