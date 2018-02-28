@@ -177,7 +177,7 @@ Some common functionalities for working with graphs in Matlab
 	
 	![recovered matrix](/images/spectral_coordinate_ex4.png)
 	
-	Very nice, indeed!
+	Very nice, indeed! It has recovered everything except for two vertices of the last cluster that are now in the first cluster, but this actually improved the results.
 
 [1] L. Wu, X. Wu, A. Lu and Y. Li, 
        "On Spectral Analysis of Signed and Dispute Graphs: Application
