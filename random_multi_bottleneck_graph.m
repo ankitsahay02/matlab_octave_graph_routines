@@ -1,4 +1,4 @@
-funnction B = random_multi_bottleneck_graph(varargin)
+function B = random_multi_bottleneck_graph(varargin)
     % Inputs:
     %   N: a list of k numbers of vertices in each part, that adds up to n,
     %       total number of vertices.
