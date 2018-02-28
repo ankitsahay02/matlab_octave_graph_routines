@@ -100,6 +100,7 @@ Some common functionalities for working with graphs in Matlab
 	colorbar;
 	```
 	![a signed graph with some apparent clusters](/images/random_multi_bottleneck_simple_graph_ex7.png)
+	
 	Then find its spectral coordinates in 3 dimenstions and plot them
 	```matlab
 	S = spectral_coordinate(A,3); 
@@ -122,6 +123,7 @@ Some common functionalities for working with graphs in Matlab
 	axis off;
 	```
 	![3 dimensional spectral coordinates of the nodes on the unit sphere](/images/spectral_coordinate_ex1.png)
+	
 	The nodes are very neatly clustered together on the unit sphere.
 	
 	
