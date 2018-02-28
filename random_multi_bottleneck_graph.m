@@ -1,4 +1,4 @@
-function B = random_multi_bottleneck_graph(varargin)
+funnction B = random_multi_bottleneck_graph(varargin)
     % Inputs:
     %   N: a list of k numbers of vertices in each part, that adds up to n,
     %       total number of vertices.
@@ -9,19 +9,50 @@ function B = random_multi_bottleneck_graph(varargin)
     %       k disconnected components and each connected component is a
     %       complete graph.
     %
+    % Options:
+    %   'Weighted': true/false
+    %       wether you want a weighted graph. It true, the entries will
+    %       have random weights between 0 and 1
+    %       Default: false
+    %   'Signed': number between 0 and 1
+    %       the fraction of edges that are negative
+    %       Default: 0, that is the graph has only nonnegative edges.
+    %
     % Outputs:
     %   B: an nxn adjacency matrix of the graph
     %
+    % One bottleneck Example :
     % 2-part Example :
     % N = [15,25];
     % P = [.90,.10; 
     %      .10,.85];
+    % A = random_multi_bottleneck_graph(N,P); 
     %
+    % Three bottlenecks Example :
     % 3-part Example :
     % N = [20,15,25];
     % P = [.90,.10,.10; 
     %      .10,.85,.20; 
     %      .10,.20,.90];
+    % A = random_multi_bottleneck_graph(N,P); 
+    %
+    % Complete connected components
+    %
+    % N = [20,15,25];
+    % P = eye(length(N));
+    % A = random_multi_bottleneck_simple_graph(N,P); 
+    % or just run it without specifying the P
+    % A = random_multi_bottleneck_graph(N); 
+    % 
+    % Complte tripartite Example
+    % N = [20,15,25];
+    % P = ones(length(N), length(N)) - eye(length(N));
+    % A = random_multi_bottleneck_graph(N,P); 
+    %
+    % You can run the code without any inputs and it will return a graph 
+    % on 40 vertices with two connected components where the connected 
+    % components are complete graphs of sizes 10 and 15, respectively.
+    %
     
     %taking care of the defaults
     defaultN = [10,15];
