@@ -1,6 +1,6 @@
 # matlab graph routines
 Some common functionalities for working with graphs in Matlab
-- **random_multi_bottleneck_graph.m** creates the adjacency matrix of a graph that has groups of vertices os sizes N(i) that are connected to each other with some given probablities P(i,j). You can also create weighted or signed graphs.
+- **random_multi_bottleneck_graph.m** creates the adjacency matrix of a graph that has groups of vertices of sizes N(i) that are connected to each other with some given probablities P(i,j). You can also create weighted or signed graphs.
 	
 	##### Examples 
     1. One bottleneck
