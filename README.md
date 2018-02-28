@@ -10,7 +10,7 @@ Some common functionalities for working with graphs in Matlab
 	N = [15,25];
 	P = [.90,.10; 
 		 .10,.85];
-	A = random_multi_bottleneck_simple_graph(N,P); 
+	A = random_multi_bottleneck_graph(N,P); 
 	spy(A)
 	```
 	![N = [15,25]; 
@@ -23,7 +23,7 @@ Some common functionalities for working with graphs in Matlab
 	P = [.90,.10,.10; 
 		 .10,.85,.20; 
 		 .10,.20,.90];
-	A = random_multi_bottleneck_simple_graph(N,P); 
+	A = random_multi_bottleneck_graph(N,P); 
 	spy(A)
 	```
 	![N = [20,15,25];
@@ -35,7 +35,7 @@ Some common functionalities for working with graphs in Matlab
 	 ```matlab
 	N = [20,15,25];
 	P = eye(length(N));
-	A = random_multi_bottleneck_simple_graph(N,P); 
+	A = random_multi_bottleneck_graph(N,P); 
 	spy(A)
 	```
 	![N = [20,15,25];
@@ -49,7 +49,7 @@ Some common functionalities for working with graphs in Matlab
 	```matlab
 	N = [20,15,25];
 	P = ones(length(N), length(N)) - eye(length(N));
-	A = random_multi_bottleneck_simple_graph(N,P); 
+	A = random_multi_bottleneck_graph(N,P); 
 	spy(A)
 	```
 	![N = [20,15,25];
@@ -57,5 +57,33 @@ Some common functionalities for working with graphs in Matlab
 		 1,0,1; 
 		 1,1,0];](/images/random_multi_bottleneck_simple_graph_ex4.png)
 
+	5. Weighted 
+	```matlab
+	N = [20,15,25];
+	P = [.90,.10,.10; 
+		 .10,.85,.20; 
+		 .10,.20,.90];
+	A = random_multi_bottleneck_graph(N,P,'weighted',true); 
+	imagesc(A)
+	colormap('jet')
+	caxis([-1,1])
+	colorbar
+	```
+	![weighted](/images/random_multi_bottleneck_simple_graph_ex5.png)
+	
+	6. Weighted and signed 
+	```matlab
+	N = [20,15,25];
+	P = [.90,.10,.10; 
+		 .10,.85,.20; 
+		 .10,.20,.90];
+	A = random_multi_bottleneck_graph(N,P,'weighted',true,'Signed',.5); 
+	imagesc(A)
+	colormap('jet')
+	caxis([-1,1])
+	colorbar
+	```
+	![weighted and signed](/images/random_multi_bottleneck_simple_graph_ex6.png)
+	
 	You can run the code without any inputs and it will return a graph on 40 vertices with two connected components where the connected components are complete graphs of sizes 10 and 15, respectively.
 	
