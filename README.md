@@ -90,7 +90,8 @@ creates the adjacency matrix of a graph that has groups of vertices of sizes N(i
 	
 	You can run the code without any inputs and it will return a graph on 40 vertices with two connected components where the connected components are complete graphs of sizes 10 and 15, respectively.
 	
-- **spectral_coordinate.m** returns the k-dimensional spectral coordinates of a (signed) graph as defined in [1], which then can be used to cluster the vertices.
+## spectral_coordinate.m
+returns the k-dimensional spectral coordinates of a (signed) graph as defined in [1], which then can be used to cluster the vertices.
 	##### Example
 	1. First generate a random signed graph that is clusterable, using above, and let's see how good is the known clustering of this graph according to the Girvan-Newman modularity:
 	```matlab
