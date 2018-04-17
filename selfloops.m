@@ -4,7 +4,6 @@
 % Last Updated: GB, October 1, 2009
 % Author: http://strategic.mit.edu/downloads.php?page=matlab_networks
 
-function sl=selfloops(adj)
-
-    sl=sum(diag(adj));
+function sl = selfloops(adj)
+    sl = sum(diag(adj));
 end

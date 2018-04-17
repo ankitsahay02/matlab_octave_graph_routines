@@ -36,7 +36,7 @@ function [Q,E] = simple_girvan_newman_modularity(A,modules)
     for i=1:k
         for j = 1:k
             if i == j
-                E(i,j) = sum(sum(A(modules{i},modules{j})))/2; %number of intra edges of i
+                E(i,j) = numedges(A(modules{i},modules{j})); %number of intra edges of i
             else
                 E(i,j) = sum(sum(A(modules{i},modules{j}))); %number of interedges between i and j
             end
@@ -47,5 +47,5 @@ function [Q,E] = simple_girvan_newman_modularity(A,modules)
     if m ~= 0 %if the graph is nonempty
         E = E/m; %devide E by total number of edges so that each entry becomes "fraction" of edges
     end
-    Q = trace(E) - sum(sum(E.^2)); %the formula as given in [1]
+    Q = trace(E) - sum(sum(E^2)); %the formula as given in [1]
 end
